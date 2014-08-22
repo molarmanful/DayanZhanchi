@@ -7,17 +7,15 @@ $(document).ready(function(){
   $('#togdir').click(function(){
   	$('#directions').slideToggle();
   });
-  $('#changecubewhite').click(function(){
-  	$('.face').css('background-color', 'white');
-  	$('.faceIntroverted').css('background-color', 'white');
-  	$('.faceIntroverted').css('border-color', 'gray');
-  	$('#changecubewhite').css('display', 'none');
+  $('#changecubestickerless').click(function(){
+  	$('.sticker').css('height', '100%');
+  	$('.sticker').css('width', '100%');
+  	$('#changecubestickerless').css('display', 'none');
   	$('#changecubeblack').css('display', 'inline-block');
   });
   $('#changecubeblack').click(function(){
-  	$('.face').css('background-color', 'black');
-  	$('.faceIntroverted').css('background-color', 'black');
-  	$('.faceIntroverted').css('border-color', 'black');
+  	$('.sticker').css('height', '98%');
+  	$('.sticker').css('width', '98%');
   	$('#changecubewhite').css('display', 'inline-block');
   	$('#changecubeblack').css('display', 'none');
   });
