@@ -8,15 +8,15 @@ $(document).ready(function(){
   	$('#directions').slideToggle();
   });
   $('#changecubestickerless').click(function(){
-  	$('.sticker').css('height', '100%');
-  	$('.sticker').css('width', '100%');
+  	$('.sticker').css('height', '150%');
+  	$('.sticker').css('width', '150%');
   	$('#changecubestickerless').css('display', 'none');
   	$('#changecubeblack').css('display', 'inline-block');
   });
   $('#changecubeblack').click(function(){
   	$('.sticker').css('height', '98%');
   	$('.sticker').css('width', '98%');
-  	$('#changecubewhite').css('display', 'inline-block');
+  	$('#changecubestickerless').css('display', 'inline-block');
   	$('#changecubeblack').css('display', 'none');
   });
 });
