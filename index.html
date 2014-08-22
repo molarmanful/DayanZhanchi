@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" type="image/png" href="http://thecubicle.us/images/brands/mfr_moyu.png">
+        <script src="cuber.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="cube.css">
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <script src="main.js"></script>
+        <title>Moyu Weilong</title>
+    </head>
+    <body>
+        <div id="cover">
+        <div id="demotext">MOYU WEILONG</div>
+            <div id="containerforcube"></div>
+        </div>
+        <div id="dircon">
+            <button id="togdir">Menu</button>
+            <div id="directions">
+                <button id="scramble" onclick="cube.shuffle(20);">SCRAMBLE</button>
+                <button id="changecubewhite">CHANGE TO WHITE</button>
+                <button id="changecubeblack">CHANGE TO BLACK</button>
+                <button id="demo" onclick="$('#patterntypes').fadeIn()">PATTERN TWISTS</button>
+                <div id="patterntypes" style="display: none; background-color: black">
+                    <button onclick="$('#patterntypes').fadeOut(); cube.twist('mmeess')">CHECKERS</button>
+                    <button onclick="$('#patterntypes').fadeOut(); cube.twist('meME')">OFF-CENTERED</button>
+                    <button onclick="$('#patterntypes').fadeOut(); cube.twist('UFblluullfBuullU')">CROSS</button>
+                    <button onclick="$('#patterntypes').fadeOut(); cube.twist('FLFuRUFFLLulBdbLLU')">CUBE INSIDE A CUBE</button><br>
+                    <button onclick="$('#patterntypes').fadeOut(); cube.twist('ulufrrbRFUBBUbLuFURf');">CUBE INSIDE A CUBE INSIDE A CUBE</button>
+                    <button onclick="$('#patterntypes').fadeOut(); cube.twist('FUFRLLBdRDDLdBRRLFUF')">STRIPES</button>
+                    <button onclick="$('#patterntypes').fadeOut(); cube.twist('RLBFRLBFRLBF')">ZIGZAG</button>
+                    <button onclick="$('#patterntypes').fadeOut(); cube.twist('RDLfRlDrUdBurd')">SNAKE</button><br>
+                    <button onclick="$('#patterntypes').fadeOut(); cube.twist('LUbuRlBrFbDRdf')">ANACONDA</button>
+                </div>
+                <h3>Directions</h3>
+                <p>You can drag with touch or mouse or keyboard:</p>
+                <ul>
+                    <li>Shift + key: clockwise rotation</li>
+                    <li>No Shift + key: counterclockwise rotation</li>
+                    <li>R: right face</li>
+                    <li>L: left face</li>
+                    <li>U: up face</li>
+                    <li>D: down face</li>
+                    <li>F: front face</li>
+                    <li>B: back face</li>
+                    <li>M: middle vertical slice</li>
+                    <li>E: middle horizontal slice</li>
+                    <li>S: middle side vertical slice</li>
+                    <li>X: move whole cube around R/L centers</li>
+                    <li>Y: move whole cube around U/D centers</li>
+                    <li>Z: move whole cube around F/B centers</li>
+                </ul>
+                <p>Tested with Chrome.</p>
+            </div>
+        </div>
+    </body>
+</html>
