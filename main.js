@@ -8,8 +8,8 @@ $(document).ready(function(){
   	$('#directions').slideToggle();
   });
   $('#changecubestickerless').click(function(){
-  	$('.sticker').css('height', '150%');
-  	$('.sticker').css('width', '150%');
+  	$('.sticker').css('height', '102%');
+  	$('.sticker').css('width', '102%');
   	$('#changecubestickerless').css('display', 'none');
   	$('#changecubeblack').css('display', 'inline-block');
   });
