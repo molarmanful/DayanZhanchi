@@ -27,14 +27,12 @@ $(document).ready(function(){
   $('#changecubewhite').click(function(){
   	$('.face').css('background-color', 'white');
   	$('.faceIntroverted').css('background-color', 'white');
-  	$('.faceIntroverted').css('border-color', 'gray');
   	$('#changecubeblack').css('display', 'inline-block');
   	$('#changecubewhite').css('display', 'none');
   });
   $('#changecubeblack').click(function(){
   	$('.face').css('background-color', 'black');
   	$('.faceIntroverted').css('background-color', 'black');
-  	$('.faceIntroverted').css('border-color', 'black');
   	$('#changecubewhite').css('display', 'inline-block');
   	$('#changecubeblack').css('display', 'none');
   });
