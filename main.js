@@ -10,8 +10,8 @@ $(document).ready(function(){
   $('#changecubestickerless').click(function(){
   	$('.sticker').css('height', '102%');
   	$('.sticker').css('width', '102%');
-  	$('.face').css('height', '.98em');
-  	$('.face').css('width', '.98em');
+  	$('.face').css('height', '.9em');
+  	$('.face').css('width', '.9em');
   	$('#changecubestickerless').css('display', 'none');
   	$('#changecubeblack').css('display', 'inline-block');
   });
