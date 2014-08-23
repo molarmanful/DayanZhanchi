@@ -8,16 +8,14 @@ $(document).ready(function(){
   	$('#directions').slideToggle();
   });
   $('#changecubestickerless').click(function(){
-  	$('.sticker').css('height', '104%');
-  	$('.sticker').css('width', '104%');
-  	$('.face').css('border-radius', '20px');
+  	$('.sticker').css('height', '102%');
+  	$('.sticker').css('width', '102%');
   	$('#changecubestickerless').css('display', 'none');
   	$('#changecubeblack').css('display', 'inline-block');
   });
   $('#changecubeblack').click(function(){
   	$('.sticker').css('height', '98%');
   	$('.sticker').css('width', '98%');
-  	$('.face').css('border-radius', '0px');
   	$('#changecubestickerless').css('display', 'inline-block');
   	$('#changecubeblack').css('display', 'none');
   });
