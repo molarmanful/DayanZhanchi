@@ -10,14 +10,14 @@ $(document).ready(function(){
   $('#changecubestickerless').click(function(){
   	$('.sticker').css('height', '102%');
   	$('.sticker').css('width', '102%');
-  	$('.sticker').css('border-radius', '20px');
+  	$('.face').css('border-radius', '20px');
   	$('#changecubestickerless').css('display', 'none');
   	$('#changecubeblack').css('display', 'inline-block');
   });
   $('#changecubeblack').click(function(){
   	$('.sticker').css('height', '98%');
   	$('.sticker').css('width', '98%');
-  	$('.sticker').css('border-radius', '0px');
+  	$('.face').css('border-radius', '0px');
   	$('#changecubestickerless').css('display', 'inline-block');
   	$('#changecubeblack').css('display', 'none');
   });
