@@ -193,7 +193,7 @@
 .cube .sticker.red 	{ background: orange; 	}
 .cube .sticker.white 	{ background: white;	}
 .cube .sticker.blue 	{ background: green; 	}
-.cube .sticker.green 	{ background: blue; }
+.cube .sticker.green 	{ background: #000080; }
 .cube .sticker.orange 	{ background: #b00000; 	}
 .cube .sticker.yellow 	{ background: gold; 	}
 
