@@ -21,8 +21,8 @@ $(document).ready(function(){
   	$('.sticker').css('width', '98%');
   	$('.face').css('height', '1em');
   	$('.face').css('width', '1em');
-  	$('#changecubestickerless').css('display', 'inline-block');
-  	$('#changecubeblack').css('display', 'none');
+  	$('#changecubeloose').css('display', 'inline-block');
+  	$('#changecubenorm').css('display', 'none');
   });
   $('#changecubewhite').click(function(){
   	$('.face').css('background-color', 'white');
