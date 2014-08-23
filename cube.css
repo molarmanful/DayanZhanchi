@@ -274,7 +274,7 @@
   	backface-visibility:         hidden;*/
 }
 div.sticker.white.stickerLogo {
-	background-image: url('http://www.speedsolving.com/wiki/images/a/aa/Dayan.png');
+	background-image: url('http://www.speedsolving.com/wiki/images/a/aa/Dayan.png') no-repeat;
 	background-position: center;
 	background-size: 98%;
 }
