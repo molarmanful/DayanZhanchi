@@ -2,25 +2,40 @@ $(document).ready(function(){
 	window.cube = new ERNO.Cube();
 	cube.position.y = 0;
 	$('#changecubeblack').css('display', 'none');
+	$('#changecubenorm').css('display', 'none');
   var container = $( '#containerforcube' );
   container.append( cube.domElement );
   $('#togdir').click(function(){
   	$('#directions').slideToggle();
   });
-  $('#changecubestickerless').click(function(){
+  $('#changecubeloose').click(function(){
   	$('.sticker').css('height', '100%');
   	$('.sticker').css('width', '100%');
   	$('.face').css('height', '.88em');
   	$('.face').css('width', '.88em');
-  	$('#changecubestickerless').css('display', 'none');
-  	$('#changecubeblack').css('display', 'inline-block');
+  	$('#changecubeloose').css('display', 'none');
+  	$('#changecubenormal').css('display', 'inline-block');
   });
-  $('#changecubeblack').click(function(){
+  $('#changecubenorm').click(function(){
   	$('.sticker').css('height', '98%');
   	$('.sticker').css('width', '98%');
   	$('.face').css('height', '1em');
   	$('.face').css('width', '1em');
   	$('#changecubestickerless').css('display', 'inline-block');
+  	$('#changecubeblack').css('display', 'none');
+  });
+  $('#changecubewhite').click(function(){
+  	$('.face').css('background-color', 'white');
+  	$('.faceIntroverted').css('background-color', 'white');
+  	$('.faceIntroverted').css('border-color', 'gray');
+  	$('#changecubeblack').css('display', 'inline-block');
+  	$('#changecubewhite').css('display', 'none');
+  });
+  $('#changecubeblack').click(function(){
+  	$('.face').css('background-color', 'black');
+  	$('.faceIntroverted').css('background-color', 'black');
+  	$('.faceIntroverted').css('border-color', 'black');
+  	$('#changecubewhite').css('display', 'inline-block');
   	$('#changecubeblack').css('display', 'none');
   });
   $(document).keydown(function(){
