@@ -14,7 +14,7 @@ $(document).ready(function(){
   	$('.face').css('height', '.88em');
   	$('.face').css('width', '.88em');
   	$('#changecubeloose').css('display', 'none');
-  	$('#changecubenormal').css('display', 'inline-block');
+  	$('#changecubenorm').css('display', 'inline-block');
   });
   $('#changecubenorm').click(function(){
   	$('.sticker').css('height', '98%');
