@@ -10,12 +10,16 @@ $(document).ready(function(){
   $('#changecubestickerless').click(function(){
   	$('.sticker').css('height', '102%');
   	$('.sticker').css('width', '102%');
+  	$('.face').css('height', '.98em');
+  	$('.face').css('width', '.98em');
   	$('#changecubestickerless').css('display', 'none');
   	$('#changecubeblack').css('display', 'inline-block');
   });
   $('#changecubeblack').click(function(){
   	$('.sticker').css('height', '98%');
   	$('.sticker').css('width', '98%');
+  	$('.face').css('height', '1em');
+  	$('.face').css('width', '1em');
   	$('#changecubestickerless').css('display', 'inline-block');
   	$('#changecubeblack').css('display', 'none');
   });
