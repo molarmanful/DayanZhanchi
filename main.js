@@ -70,7 +70,21 @@ function pop(){
 				})
 				.start( cube.time )
 			cubelet.isTweening = true;
+			new TWEEN.Tween( cubelet.position )
+				.to({
+					x: 0,
+					y: 0,
+					z: 0,
+	
+				}, 1000 )
+				.easing( TWEEN.Easing.Quintic.Out )
+				.onComplete( function(){
+					cubelet.isTweening = false;
+				})
+				.start( cube.time )
+			cubelet.isTweening = true;
 		});
-		$('#demotext').text('YOUR CUBE HAS POPPED! Put it back together by turning faces.').css('color','red');
+		$('#demotext').text('YOUR CUBE HAS POPPED!').css('color','red');
+		
 	}
 }
