@@ -47,7 +47,15 @@ function pop(){
   	if(rand > 1 && rand < 10){
   		cube.cubelets.forEach(function(cubelet){
   			if(cubelet.type === "edge"){
-  				
+  				var target = { x : 2000, y: 2000, z: -2000 };
+          var tween = new TWEEN.Tween(position).to(target, 2000);
+          tween.onUpdate(function(){
+            cubelet.position.x = position.x;
+            cubelet.position.y = position.y;
+            cubelet.position.z = position.z
+          });
+          tween.start();
+          TWEEN.update();
   			}
   		});
   	}
