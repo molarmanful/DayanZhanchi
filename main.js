@@ -76,6 +76,7 @@ function pop(){
 				})
 				.start( cube.time )
 			cubelet.isTweening = true;
+			$(document).delay(500);
 			new TWEEN.Tween( cubelet.position )
 				.to({
 					x: 0,
