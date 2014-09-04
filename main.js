@@ -45,10 +45,31 @@ $(document).ready(function(){
 function pop(){
 	var random = Math.floor(Math.random() * 500);
 	if(random > 1 && random < 10){
-		cube.cubelets.forEach(function(cubelet){
-			if(cubelet.type === "edge"){
-				$(this).fadeOut('slow');
+		cube.cubelets.forEach( function(cubelet){
+			var tmp = {
+				x: cubelet.position.x,
+				y: cubelet.position.y,
+				z: cubelet.position.z
 			}
+			var distance = 1000
+			cubelet.position.set(
+				cubelet.addressX * distance,
+				cubelet.addressY * distance,
+				cubelet.addressZ * distance
+			)
+			new TWEEN.Tween( cubelet.position )
+				.to({
+					x: 2000,
+					y: 2000,
+					z: 2000,
+	
+				}, 1000 )
+				.easing( TWEEN.Easing.Quintic.Out )
+				.onComplete( function(){
+					cubelet.isTweening = false;
+				})
+				.start( cube.time )
+			cubelet.isTweening = true;
 		});
 	}
 }
