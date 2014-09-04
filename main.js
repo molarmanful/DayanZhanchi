@@ -39,8 +39,11 @@ $(document).ready(function(){
   	$('#changecubewhite').css('display', 'inline-block');
   	$('#changecubeblack').css('display', 'none');
   });
-  $(document).keydown(function(){
-  	var rand = Math.floor(Math.random()*500);
+  $(document).keydown(pop);
+  $(document).mousedown(pop);
+});
+function pop(){
+    var rand = Math.floor(Math.random() * 500);
   	if(rand > 1 && rand < 10){
   		cube.cubelets.forEach(function(cubelet){
   			if(cubelet.type === "edge"){
@@ -48,5 +51,4 @@ $(document).ready(function(){
   			}
   		});
   	}
-  });
-});
+}
