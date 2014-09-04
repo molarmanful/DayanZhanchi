@@ -76,12 +76,12 @@ function pop(){
 				})
 				.start( cube.time )
 			cubelet.isTweening = true;
-			$(document).delay(500);
+			$(document).delay(2000);
 			new TWEEN.Tween( cubelet.position )
 				.to({
-					x: 0,
-					y: 0,
-					z: 0,
+					x: tmp,
+					y: tmp,
+					z: tmp,
 	
 				}, 1000 )
 				.easing( TWEEN.Easing.Quintic.Out )
