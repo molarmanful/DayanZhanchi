@@ -43,5 +43,40 @@ $(document).ready(function(){
   $(document).mousedown(pop);
 });
 function pop(){
-    
+	cube.cubelets.forEach( function( cubelet ){
+		var tmp = {
+			x: cubelet.position.x,
+			y: cubelet.position.y,
+			z: cubelet.position.z
+		}
+		var distance = 1000
+		cubelet.position.set(
+			cubelet.addressX * distance,
+			cubelet.addressY * distance,
+			cubelet.addressZ * distance
+		)
+		var delay
+		if( cubelet.type === 'edge') delay = (800).random(1000)
+		if( cubelet.type === 'corner') delay = (1100).random(1500)
+
+
+		//  We want those cubelets to go home, which used to be 0,0,0.
+		//  Alas, now we have to rely on a cloned previous position.
+
+		new TWEEN.Tween( cubelet.position )
+			.to({
+
+				x: 2000,
+				y: 2000,
+				z: 2000,
+
+			}, 1000 )
+			.delay( delay )
+			.easing( TWEEN.Easing.Quintic.Out )
+			.onComplete( function(){
+				cubelet.isTweening = false
+			})
+			.start( cube.time )
+		cubelet.isTweening = true
+	});
 }
