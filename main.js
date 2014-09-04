@@ -11,6 +11,8 @@ $(document).ready(function(){
   $('#togdir').click(function(){
   	$('#directions').slideToggle();
   });
+  var number = 10000;
+  var random = Math.floor(Math.random() * number);
   $('#changecubeloose').click(function(){
   	$('.sticker').css('height', '100%');
   	$('.sticker').css('width', '100%');
@@ -18,6 +20,7 @@ $(document).ready(function(){
   	$('.face').css('width', '.88em');
   	$('#changecubeloose').css('display', 'none');
   	$('#changecubenorm').css('display', 'inline-block');
+  	number = 500;
   });
   $('#changecubenorm').click(function(){
   	$('.sticker').css('height', '98%');
@@ -26,6 +29,7 @@ $(document).ready(function(){
   	$('.face').css('width', '1em');
   	$('#changecubeloose').css('display', 'inline-block');
   	$('#changecubenorm').css('display', 'none');
+  	number = 10000;
   });
   $('#changecubewhite').click(function(){
   	$('.face').css('background-color', 'white');
@@ -43,7 +47,6 @@ $(document).ready(function(){
   $(document).mousedown(pop);
 });
 function pop(){
-	var random = Math.floor(Math.random() * 10000);
 	if(random > 1 && random < 10){
 		cube.cubelets.forEach( function(cubelet){
 			var tmp = {
