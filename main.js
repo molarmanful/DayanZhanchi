@@ -43,7 +43,7 @@ $(document).ready(function(){
   $(document).mousedown(pop);
 });
 function pop(){
-	var random = Math.floor(Math.random() * 500);
+	var random = Math.floor(Math.random() * 10000);
 	if(random > 1 && random < 10){
 		cube.cubelets.forEach( function(cubelet){
 			var tmp = {
@@ -71,6 +71,6 @@ function pop(){
 				.start( cube.time )
 			cubelet.isTweening = true;
 		});
-		$('#demotext').text('YOUR CUBE HAS POPPED.');
+		$('#demotext').text('YOUR CUBE HAS POPPED! Put it back together by turning faces.').css('color','red');
 	}
 }
