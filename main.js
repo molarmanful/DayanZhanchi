@@ -71,5 +71,6 @@ function pop(){
 				.start( cube.time )
 			cubelet.isTweening = true;
 		});
+		$('#demotext').text('YOUR CUBE HAS POPPED.');
 	}
 }
