@@ -76,20 +76,6 @@ function pop(){
 				})
 				.start( cube.time )
 			cubelet.isTweening = true;
-			$(document).delay(2000);
-			new TWEEN.Tween( cubelet.position )
-				.to({
-					x: tmp,
-					y: tmp,
-					z: tmp,
-	
-				}, 1000 )
-				.easing( TWEEN.Easing.Quintic.Out )
-				.onComplete( function(){
-					cubelet.isTweening = false;
-				})
-				.start( cube.time )
-			cubelet.isTweening = true;
 		});
 		$('#demotext').text('YOUR CUBE HAS POPPED!').css('color','red');
 		
