@@ -66,10 +66,10 @@ function pop(){
 				}, 1000 )
 				.easing( TWEEN.Easing.Quintic.Out )
 				.onComplete( function(){
-					cubelet.isTweening = false
+					cubelet.isTweening = false;
 				})
 				.start( cube.time )
-			cubelet.isTweening = true
+			cubelet.isTweening = true;
 		});
 	}
 }
