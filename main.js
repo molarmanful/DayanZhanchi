@@ -66,9 +66,9 @@ function pop(){
 			)
 			new TWEEN.Tween( cubelet.position )
 				.to({
-					x: 500,
-					y: 500,
-					z: 500,
+					x: 1000,
+					y: 1000,
+					z: 1000,
 	
 				}, 3000 )
 				.easing( TWEEN.Easing.Quintic.Out )
