@@ -2,6 +2,7 @@ $(document).ready(function(){
   if ( self !== top ) {
     $('#dircon').css('display', 'none');
   }
+  $('html').css('display', 'none').delay(500).fadeIn('slow');
   window.cube = new ERNO.Cube();
   cube.position.y = 0;
   $('#changecubeblack').css('display', 'none');
@@ -45,7 +46,7 @@ $(document).ready(function(){
 function pop(){
 	var number;
 	if($('.face').css('width') == '.88em'){
-		number = 500;
+		number = 100;
 	} else {
 		number = 10000;
 	}
@@ -57,7 +58,7 @@ function pop(){
 				y: cubelet.position.y,
 				z: cubelet.position.z
 			}
-			var distance = 1000
+			var distance = 1000;
 			cubelet.position.set(
 				cubelet.addressX * distance,
 				cubelet.addressY * distance,
@@ -65,23 +66,9 @@ function pop(){
 			)
 			new TWEEN.Tween( cubelet.position )
 				.to({
-					x: 2000,
-					y: 2000,
-					z: 2000,
-	
-				}, 3000 )
-				.easing( TWEEN.Easing.Quintic.Out )
-				.onComplete( function(){
-					cubelet.isTweening = false;
-				})
-				.start( cube.time )
-			cubelet.isTweening = true;
-			$(document).delay(1000);
-			new TWEEN.Tween( cubelet.position )
-				.to({
-					x: tmp,
-					y: tmp,
-					z: tmp,
+					x: 100,
+					y: 100,
+					z: 100,
 	
 				}, 3000 )
 				.easing( TWEEN.Easing.Quintic.Out )
