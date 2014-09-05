@@ -69,7 +69,21 @@ function pop(){
 					y: 2000,
 					z: 2000,
 	
-				}, 1000 )
+				}, 3000 )
+				.easing( TWEEN.Easing.Quintic.Out )
+				.onComplete( function(){
+					cubelet.isTweening = false;
+				})
+				.start( cube.time )
+			cubelet.isTweening = true;
+			$(document).delay(1000);
+			new TWEEN.Tween( cubelet.position )
+				.to({
+					x: tmp,
+					y: tmp,
+					z: tmp,
+	
+				}, 3000 )
 				.easing( TWEEN.Easing.Quintic.Out )
 				.onComplete( function(){
 					cubelet.isTweening = false;
