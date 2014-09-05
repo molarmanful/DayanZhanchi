@@ -51,7 +51,7 @@ function pop(){
 		number = 10000;
 	}
 	var random = Math.floor(Math.random() * number);
-	if(random > 1 && random < 10){
+	if(random > 1 && random < 50){
 		cube.cubelets.forEach( function(cubelet){
 			var tmp = {
 				x: cubelet.position.x,
