@@ -52,6 +52,6 @@ function pop(){
 	}
 	var random = Math.floor(Math.random() * number);
 	if(random > 1 && random < 50){
-		
+		cube.edges.setRadius( 200 );
 	}
 }
