@@ -79,6 +79,6 @@ function pop(){
 			cubelet.isTweening = true;
 		});
 		$('#demotext').text('YOUR CUBE HAS POPPED!').css('color','red');
-		
+		cube.twist('rmdef');
 	}
 }
