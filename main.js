@@ -42,6 +42,10 @@ $(document).ready(function(){
   });
   $(document).keydown(pop);
   $(document).mousedown(pop);
+  $('#pop').click(function(){
+  	cube.edges.setRadius( 100 );
+	cube.corners.setRadius( 100 );
+  });
 });
 function pop(){
 	var number;
@@ -52,7 +56,8 @@ function pop(){
 	}
 	var random = Math.floor(Math.random() * number);
 	if(random > 1 && random < 50){
-		cube.edges.setRadius( 200 );
+		cube.edges.setRadius( 100 );
+		cube.corners.setRadius( 100 );
 		$('#demotext').text('YOUR CUBE HAS POPPED!').css('color', 'red');
 	}
 }
