@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('#dircon').css('display', 'none');
   }
   $('html').css('display', 'none').delay(500).fadeIn('slow');
+  $('#reassemble').css('display', 'none');
   window.cube = new ERNO.Cube();
   cube.position.y = 0;
   $('#changecubeblack').css('display', 'none');
@@ -45,6 +46,14 @@ $(document).ready(function(){
   $('#pop').click(function(){
   	cube.edges.setRadius( 100 );
 	cube.corners.setRadius( 100 );
+	$(this).css('display', 'none');
+	$('#reassemble').css('display', 'inline-block');
+  });
+  $('#reassemble').click(function(){
+  	cube.edges.setRadius( 0 );
+	cube.corners.setRadius( 0 );
+	$(this).css('display', 'none');
+	$('#pop').css('display', 'inline-block');
   });
 });
 function pop(){
