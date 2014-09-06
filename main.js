@@ -54,8 +54,8 @@ function pop(){
 	if(random > 1 && random < 50){
 		cube.cubelets.forEach(function(cubelet){
 			if(cubelet.type === "edge"){
-				var random = Math.floor(Math.random());
-				if(random == 0){
+				var ran = Math.floor(Math.random());
+				if(ran == 0){
 					cubelet.remove();
 				}
 			}
