@@ -54,10 +54,7 @@ function pop(){
 	if(random > 1 && random < 50){
 		cube.cubelets.forEach(function(cubelet){
 			if(cubelet.type === "edge"){
-				var ran = Math.floor(Math.random());
-				if(ran == 0){
-					cubelet.remove();
-				}
+				cubelet.fadeOut('fast');
 			}
 		});
 		$('#demotext').text('YOUR CUBE HAS POPPED!').css('color','red');
