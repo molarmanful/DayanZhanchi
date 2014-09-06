@@ -52,33 +52,14 @@ function pop(){
 	}
 	var random = Math.floor(Math.random() * number);
 	if(random > 1 && random < 50){
-		cube.cubelets.forEach( function(cubelet){
-			var tmp = {
-				x: cubelet.position.x,
-				y: cubelet.position.y,
-				z: cubelet.position.z
+		cube.cubelets.forEach(function(cubelet){
+			if(cubelet.type === "edge"){
+				var random = Math.floor(Math.random());
+				if(random == 0){
+					cubelet.remove();
+				}
 			}
-			var distance = 1000;
-			cubelet.position.set(
-				cubelet.addressX * distance,
-				cubelet.addressY * distance,
-				cubelet.addressZ * distance
-			)
-			new TWEEN.Tween( cubelet.position )
-				.to({
-					x: 1000,
-					y: 1000,
-					z: 1000,
-	
-				}, 3000 )
-				.easing( TWEEN.Easing.Quintic.Out )
-				.onComplete( function(){
-					cubelet.isTweening = false;
-				})
-				.start( cube.time )
-			cubelet.isTweening = true;
 		});
 		$('#demotext').text('YOUR CUBE HAS POPPED!').css('color','red');
-		cube.twist('rmdef');
 	}
 }
