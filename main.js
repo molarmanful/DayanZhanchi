@@ -46,7 +46,7 @@ $(document).ready(function(){
 function pop(){
 	var number;
 	if($('.face').css('width') == '.88em'){
-		number = 100;
+		number = 50;
 	} else {
 		number = 10000;
 	}
