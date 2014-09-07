@@ -78,8 +78,8 @@ $(document).ready(function(){
 	$('.cube').css('width', '150%');
 	$(this).css('display', 'none');
 	$('#three').css('display', 'inline-block');
-	$('#pop').fadeOut('slow');
-	$('#reassemble').fadeOut('slow');
+	$('#pop').fadeOut('fast');
+	$('#reassemble').fadeOut('fast');
   });
   $('#three').click(function(){
   	cube.edges.setRadius(0);
