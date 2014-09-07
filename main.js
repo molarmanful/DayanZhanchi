@@ -10,7 +10,7 @@ $(document).ready(function(){
   $('#three').css('display', 'none');
   window.cube = new ERNO.Cube();
   cube.position.y = 0;
-  cube.twistDuration = 200;
+  cube.twistDuration = 100;
   $('#changecubeblack').css('display', 'none');
   $('#changecubestickerless').css('display', 'none');
   $('#changecubenorm').css('display', 'none');
