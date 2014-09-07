@@ -49,6 +49,9 @@ $(document).ready(function(){
   	$(this).css('display', 'none');
   });
   $('#changecubeblack').click(function(){
+  	Array.prototype.slice.call( document.querySelectorAll( '.cubelet' )).forEach( function( e ){
+		e.classList.remove( 'purty' );
+	});
   	$('.face').css('background-color', 'black');
   	$('.faceIntroverted').css('background-color', 'black');
   	$('#changecubewhite').css('display', 'inline-block');
