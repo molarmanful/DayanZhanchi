@@ -80,7 +80,6 @@ $(document).ready(function(){
 	$(this).css('display', 'none');
 	$('#two').css('display', 'inline-block');
 	$('#pop').css('display', 'inline-block');
-	$('#reassemble').css('display', 'inline-block');
   });
 
 });
