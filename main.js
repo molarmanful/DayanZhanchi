@@ -15,7 +15,7 @@ $(document).ready(function(){
   $('html').css('display', 'none').delay(500).fadeIn('slow');
   $('#reassemble').css('display', 'none');
   $('#three').css('display', 'none');
-  $('#stickered').css('display', 'none');
+  $('#sticker').css('display', 'none');
   window.cube = new ERNO.Cube();
   cube.position.y = 0;
   cube.twistDuration = 100;
