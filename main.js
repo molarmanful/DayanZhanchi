@@ -4,6 +4,7 @@ $(document).ready(function(){
   }
   var edge = 0;
   var corner = 0;
+  var center = 0;
   $('html').css('display', 'none').delay(500).fadeIn('slow');
   $('#reassemble').css('display', 'none');
   $('#three').css('display', 'none');
@@ -49,12 +50,14 @@ $(document).ready(function(){
   $('#pop').click(function(){
   	cube.edges.setRadius(100);
 	cube.corners.setRadius( 100 );
+	cube.centers.setRadius( 100 );
 	$(this).css('display', 'none');
 	$('#reassemble').css('display', 'inline-block');
   });
   $('#reassemble').click(function(){
   	cube.edges.setRadius(edge);
 	cube.corners.setRadius(corner);
+	cube.centers.setRadius(center);
 	$(this).css('display', 'none');
 	$('#pop').css('display', 'inline-block');
   });
