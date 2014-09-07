@@ -89,8 +89,10 @@ function pop(){
 	}
 	var random = Math.floor(Math.random() * number);
 	if(random > 1 && random < 50){
-		cube.edges.setRadius( 1000 );
-		cube.corners.setRadius( 1000 );
+		var edgear = [2, 4, 6, 8, 10, 12, 15, 17, 19, 21, 23, 25];
+		var randedge = Math.floor(Math.random() * edgear.length);
+		cube.hasAddress(edgear[randedge]).setRadius(1000);
+		cube.hasAddress(edgear[randedge]).setRadius(1000);
 		$('#demotext').text('YOUR CUBE HAS POPPED!').css('color', 'red');
 	}
 }
