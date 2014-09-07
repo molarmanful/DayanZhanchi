@@ -56,6 +56,21 @@ $(document).ready(function(){
 	$(this).css('display', 'none');
 	$('#pop').css('display', 'inline-block');
   });
+  $('#two').click(function(){
+  	cube.edges.setRadius(-140);
+	cube.corners.setRadius(-60);
+	cube.centers.setRadius(-140);
+	$(this).css('display', 'none');
+	$('#3x3').css('display', 'inline-block');
+  });
+  $('#three').click(function(){
+  	cube.edges.setRadius(0);
+  	cube.centers.setRadius(0);
+  	cube.corners.setRadius(0);
+	$(this).css('display', 'none');
+	$('#2x2').css('display', 'inline-block');
+  });
+
 });
 function pop(){
 	var number;
