@@ -38,19 +38,13 @@ $(document).ready(function(){
   $('#changecubewhite').click(function(){
   	$('.face').css('background-color', 'white');
   	$('.faceIntroverted').css('background-color', 'white');
-  	$('#changecubestickerless').css('display', 'inline-block');
+  	$('#changecubeblack').css('display', 'inline-block');
   	$(this).css('display', 'none');
   });
   $('#changecubeblack').click(function(){
-  	$('.cubelet').removeClass('purty');
   	$('.face').css('background-color', 'black');
   	$('.faceIntroverted').css('background-color', 'black');
   	$('#changecubewhite').css('display', 'inline-block');
-  	$(this).css('display', 'none');
-  });
-  $('#changecubestickerless').click(function(){
-  	$('.cubelet').addClass('purty');
-  	$('#changecubeblack').css('display', 'inline-block');
   	$(this).css('display', 'none');
   });
   $(document).keydown(pop);
@@ -73,6 +67,8 @@ $(document).ready(function(){
   	cube.edges.setRadius(-140);
 	cube.corners.setRadius(-60);
 	cube.centers.setRadius(-140);
+	$('.cube').css('height', '150%');
+	$('.cube').css('width', '150%');
 	$(this).css('display', 'none');
 	$('#three').css('display', 'inline-block');
 	$('#pop').fadeOut('slow');
@@ -82,6 +78,8 @@ $(document).ready(function(){
   	cube.edges.setRadius(0);
   	cube.centers.setRadius(0);
   	cube.corners.setRadius(0);
+  	$('.cube').css('height', '100%');
+  	$('.cube').css('width', '100%');
 	$(this).css('display', 'none');
 	$('#two').css('display', 'inline-block');
 	$('#pop').fadeIn('slow');
