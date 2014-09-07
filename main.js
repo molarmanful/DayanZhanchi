@@ -59,7 +59,8 @@ $(document).ready(function(){
   $('#pop').click(function(){
   	cube.cubelets.forEach( function( cubelet ){
 		cubelet.setRadius(( 100 ).random( 1000 ))
-	})
+	});
+	cube.autoRotate = true;
 	$(this).css('display', 'none');
 	$('#reassemble').css('display', 'inline-block');
   });
@@ -67,6 +68,7 @@ $(document).ready(function(){
   	cube.edges.setRadius(edge);
 	cube.corners.setRadius(corner);
 	cube.centers.setRadius(center);
+	cube.autoRotate = false;
 	$(this).css('display', 'none');
 	$('#pop').css('display', 'inline-block');
   });
