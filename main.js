@@ -95,7 +95,7 @@ function pop(){
 	}
 	var random = Math.floor(Math.random() * number);
 	if(random > 1 && random < 50){
-		var edgear = [2, 4, 6, 8, 10, 12, 15, 17, 19, 21, 23, 25];
+		var edgear = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25];
 		var randedge = Math.floor(Math.random() * edgear.length);
 		cube.hasAddress(edgear[randedge]).setRadius(1000);
 		cube.hasAddress(edgear[randedge]).setRadius(1000);
