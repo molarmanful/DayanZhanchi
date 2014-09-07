@@ -20,7 +20,6 @@ $(document).ready(function(){
   cube.position.y = 0;
   cube.twistDuration = 100;
   $('#changecubeblack').css('display', 'none');
-  $('#changecubestickerless').css('display', 'none');
   $('#changecubenorm').css('display', 'none');
   var container = $('#containerforcube');
   container.append( cube.domElement );
@@ -101,6 +100,8 @@ $(document).ready(function(){
 	});
 	$(this).css('display', 'none');
 	$('#sticker').css('display', 'inline-block');
+	$('#changecubeblack').fadeOut('fast');
+	$('#changecubewhite').fadeOut('fast');
   });
   $('#sticker').click(function(){
 	Array.prototype.slice.call( document.querySelectorAll( '.cubelet' )).forEach( function( e ){
@@ -108,6 +109,7 @@ $(document).ready(function(){
 	})
 	$(this).css('display', 'none');
 	$('#stickerless').css('display', 'inline-block');
+	$('#changecubewhite').fadeIn('fast');
   });
 });
 function pop(){
