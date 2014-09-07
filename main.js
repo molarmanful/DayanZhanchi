@@ -5,6 +5,13 @@ $(document).ready(function(){
   var edge = 0;
   var corner = 0;
   var center = 0;
+  var idleInterval = setInterval(timerIncrement, 10000);
+  $(document).mousemove(function (e) {
+  	clearInterval(idleInterval);
+  });
+  $(document).keypress(function (e) {
+  	clearInterval(idleInterval);
+  });
   $('html').css('display', 'none').delay(500).fadeIn('slow');
   $('#reassemble').css('display', 'none');
   $('#three').css('display', 'none');
@@ -101,4 +108,15 @@ function pop(){
 		cube.hasAddress(edgear[randedge]).setRadius(1000);
 		$('#demotext').text('YOUR CUBE HAS POPPED!').css('color', 'red');
 	}
+}
+function timerIncrement() {
+	cube.autoRotate = true;
+	$(document).mousemove(function (e) {
+		clearInterval(idleInterval);
+		cube.autoRotate = false;
+	});
+	$(document).keypress(function (e) {
+		clearInterval(idleInterval);
+		cube.autoRotate = false;
+	});
 }
