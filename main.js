@@ -4,6 +4,7 @@ $(document).ready(function(){
   }
   $('html').css('display', 'none').delay(500).fadeIn('slow');
   $('#reassemble').css('display', 'none');
+  $('#3x3').css('display', 'none');
   window.cube = new ERNO.Cube();
   cube.position.y = 0;
   $('#changecubeblack').css('display', 'none');
@@ -65,8 +66,22 @@ function pop(){
 	}
 	var random = Math.floor(Math.random() * number);
 	if(random > 1 && random < 50){
-		cube.edges.setRadius( 100 );
-		cube.corners.setRadius( 100 );
+		cube.edges.setRadius( 1000 );
+		cube.corners.setRadius( 1000 );
 		$('#demotext').text('YOUR CUBE HAS POPPED!').css('color', 'red');
 	}
 }
+$('#2x2').click(function(){
+  	cube.edges.setRadius(-140);
+	cube.corners.setRadius(-60);
+	cube.centers.setRadius(-140);
+	$(this).css('display', 'none');
+	$('#3x3').css('display', 'inline-block');
+  });
+  $('#3x3').click(function(){
+  	cube.edges.setRadius(0);
+  	cube.centers.setRadius(0);
+  	cube.corners.setRadius(0);
+	$(this).css('display', 'none');
+	$('#2x2').css('display', 'inline-block');
+  });
