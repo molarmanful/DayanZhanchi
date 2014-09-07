@@ -41,15 +41,14 @@ $(document).ready(function(){
   	$(this).css('display', 'none');
   });
   $('#changecubeblack').click(function(){
+  	$('.cubelet').removeClass('purty');
   	$('.face').css('background-color', 'black');
   	$('.faceIntroverted').css('background-color', 'black');
   	$('#changecubewhite').css('display', 'inline-block');
   	$(this).css('display', 'none');
   });
   $('#changecubestickerless').click(function(){
-  	Array.prototype.slice.call( document.querySelectorAll('.cubelet')).forEach( function( e ){
-		e.classList.add('purty');
-	});
+  	$('.cubelet').addClass('purty');
   	$('#changecubeblack').css('display', 'inline-block');
   	$(this).css('display', 'none');
   });
