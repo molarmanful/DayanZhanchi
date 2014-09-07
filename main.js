@@ -45,7 +45,7 @@ $(document).ready(function(){
   $('#changecubewhite').click(function(){
   	$('.face').css('background-color', 'white');
   	$('.faceIntroverted').css('background-color', 'white');
-  	$('#stickerless').css('display', 'inline-block');
+  	$('#changecubeblack').css('display', 'inline-block');
   	$(this).css('display', 'none');
   });
   $('#changecubeblack').click(function(){
@@ -56,13 +56,6 @@ $(document).ready(function(){
   	$('.faceIntroverted').css('background-color', 'black');
   	$('#changecubewhite').css('display', 'inline-block');
   	$(this).css('display', 'none');
-  });
-  $('#stickerless').click(function(){
-	Array.prototype.slice.call( document.querySelectorAll( '.cubelet' )).forEach( function( e ){
-		e.classList.add( 'purty' );
-	});
-	$(this).css('display', 'none');
-	$('#changecubeblack').css('display', 'inline-block');
   });
   $(document).keypress(pop);
   $(document).mousedown(pop);
