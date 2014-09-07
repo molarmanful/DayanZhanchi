@@ -2,6 +2,8 @@ $(document).ready(function(){
   if ( self !== top ) {
     $('#dircon').css('display', 'none');
   }
+  var edge = 0;
+  var corner = 0;
   $('html').css('display', 'none').delay(500).fadeIn('slow');
   $('#reassemble').css('display', 'none');
   $('#three').css('display', 'none');
@@ -45,14 +47,20 @@ $(document).ready(function(){
   $(document).keydown(pop);
   $(document).mousedown(pop);
   $('#pop').click(function(){
-  	cube.edges.setRadius( 100 );
+  	if($('#two').css('display') == 'none'){
+  		edge = -140;
+  	}
+  	cube.edges.setRadius(edge);
 	cube.corners.setRadius( 100 );
 	$(this).css('display', 'none');
 	$('#reassemble').css('display', 'inline-block');
   });
   $('#reassemble').click(function(){
-  	cube.edges.setRadius( 0 );
-	cube.corners.setRadius( 0 );
+  	if($('#two').css('display') == 'none'){
+  		corner = -60;
+  	}
+  	cube.edges.setRadius(edge);
+	cube.corners.setRadius(corner);
 	$(this).css('display', 'none');
 	$('#pop').css('display', 'inline-block');
   });
