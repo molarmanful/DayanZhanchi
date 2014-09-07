@@ -47,7 +47,7 @@ $(document).ready(function(){
   $(document).keydown(pop);
   $(document).mousedown(pop);
   $('#pop').click(function(){
-  	cube.edges.setRadius(edge);
+  	cube.edges.setRadius(100);
 	cube.corners.setRadius( 100 );
 	$(this).css('display', 'none');
 	$('#reassemble').css('display', 'inline-block');
