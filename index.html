@@ -23,6 +23,10 @@
                 <button id="changecubenorm">CHANGE TO NORMAL TENSION</button>
                 <button id="changecubeblack">CHANGE TO BLACK</button>
                 <button id="changecubewhite">CHANGE TO WHITE</button>
+                <button id="pop">EXPLODE</button>
+                <button id="reassemble">PUT BACK TOGETHER</button>
+                <button id="two">2x2 VERSION</button>
+                <button id="three">3x3 VERSION</button>
                 <button id="demo" onclick="$('#patterntypes').fadeIn()">PATTERN TWISTS</button>
                 <div id="patterntypes" style="display: none; background-color: black">
                     <button onclick="$('#patterntypes').fadeOut(); cube.twist('mmeess')">CHECKERS</button>
@@ -35,11 +39,8 @@
                     <button onclick="$('#patterntypes').fadeOut(); cube.twist('RDLfRlDrUdBurd')">SNAKE</button><br>
                     <button onclick="$('#patterntypes').fadeOut(); cube.twist('LUbuRlBrFbDRdf')">ANACONDA</button>
                     <button onclick="$('#patterntypes').fadeOut(); cube.twist('RUru'.multiply(6))">SEXY MOVE</button>
+                    <button onclick="$('#patterntypes').fadeOut(); cube.twist('rfRF'.multiply(6))">SLEDGEHAMMER</button>
                 </div>
-                <button id="pop">EXPLODE</button>
-                <button id="reassemble">PUT BACK TOGETHER</button>
-                <button id="two">2x2 VERSION</button>
-                <button id="three">3x3 VERSION</button>
                 <h3>Directions</h3>
                 <p>You can drag with touch or mouse or keyboard:</p>
                 <ul>
