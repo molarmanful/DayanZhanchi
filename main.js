@@ -70,6 +70,8 @@ $(document).ready(function(){
 	cube.centers.setRadius(-140);
 	$(this).css('display', 'none');
 	$('#three').css('display', 'inline-block');
+	$('#pop').css('display', 'none');
+	$('#reassemble').css('display', 'none');
   });
   $('#three').click(function(){
   	cube.edges.setRadius(0);
@@ -77,6 +79,8 @@ $(document).ready(function(){
   	cube.corners.setRadius(0);
 	$(this).css('display', 'none');
 	$('#two').css('display', 'inline-block');
+	$('#pop').css('display', 'inline-block');
+	$('#reassemble').css('display', 'inline-block');
   });
 
 });
