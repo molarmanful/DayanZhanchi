@@ -57,9 +57,9 @@ $(document).ready(function(){
   $(document).keypress(pop);
   $(document).mousedown(pop);
   $('#pop').click(function(){
-  	cube.edges.setRadius(100);
-	cube.corners.setRadius( 100 );
-	cube.centers.setRadius( 100 );
+  	cube.cubelets.forEach( function( cubelet ){
+		cubelet.setRadius(( 100 ).random( 1000 ))
+	})
 	$(this).css('display', 'none');
 	$('#reassemble').css('display', 'inline-block');
   });
