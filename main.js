@@ -15,7 +15,6 @@ $(document).ready(function(){
   $('html').css('display', 'none').delay(500).fadeIn('slow');
   $('#reassemble').css('display', 'none');
   $('#three').css('display', 'none');
-  $('#stickerless').css('display', 'none');
   window.cube = new ERNO.Cube();
   cube.position.y = 0;
   cube.twistDuration = 100;
@@ -43,8 +42,9 @@ $(document).ready(function(){
   	$('#changecubenorm').css('display', 'none');
   });
   $('#changecubewhite').click(function(){
-  	$('.face').css('background-color', 'white');
-  	$('.faceIntroverted').css('background-color', 'white');
+  	Array.prototype.slice.call( document.querySelectorAll( '.cubelet' )).forEach( function( e ){
+		e.classList.add( 'purty' );
+	});
   	$('#changecubeblack').css('display', 'inline-block');
   	$(this).css('display', 'none');
   });
@@ -52,8 +52,6 @@ $(document).ready(function(){
   	Array.prototype.slice.call( document.querySelectorAll( '.cubelet' )).forEach( function( e ){
 		e.classList.remove( 'purty' );
 	});
-  	$('.face').css('background-color', 'black');
-  	$('.faceIntroverted').css('background-color', 'black');
   	$('#changecubewhite').css('display', 'inline-block');
   	$(this).css('display', 'none');
   });
