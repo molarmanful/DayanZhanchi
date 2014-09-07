@@ -45,7 +45,7 @@ $(document).ready(function(){
   $('#changecubewhite').click(function(){
   	$('.face').css('background-color', 'white');
   	$('.faceIntroverted').css('background-color', 'white');
-  	$('#changecubeblack').css('display', 'inline-block');
+  	$('#stickerless').css('display', 'inline-block');
   	$(this).css('display', 'none');
   });
   $('#changecubeblack').click(function(){
@@ -54,7 +54,13 @@ $(document).ready(function(){
   	$('#changecubewhite').css('display', 'inline-block');
   	$(this).css('display', 'none');
   });
-  $()
+  $('#stickerless').click(function(){
+	Array.prototype.slice.call( document.querySelectorAll( '.cubelet' )).forEach( function( e ){
+		e.classList.add( 'purty' );
+	});
+	$(this).css('display', 'none');
+	$('#changecubeblack').css('display', 'inline-block');
+  });
   $(document).keypress(pop);
   $(document).mousedown(pop);
   $('#pop').click(function(){
@@ -93,23 +99,6 @@ $(document).ready(function(){
 	$(this).css('display', 'none');
 	$('#two').css('display', 'inline-block');
 	$('#pop').fadeIn('slow');
-  });
-  $('#stickerless').click(function(){
-	Array.prototype.slice.call( document.querySelectorAll( '.cubelet' )).forEach( function( e ){
-		e.classList.add( 'purty' );
-	});
-	$(this).css('display', 'none');
-	$('#sticker').css('display', 'inline-block');
-	$('#changecubeblack').fadeOut('fast');
-	$('#changecubewhite').fadeOut('fast');
-  });
-  $('#sticker').click(function(){
-	Array.prototype.slice.call( document.querySelectorAll( '.cubelet' )).forEach( function( e ){
-		e.classList.remove( 'purty' );
-	})
-	$(this).css('display', 'none');
-	$('#stickerless').css('display', 'inline-block');
-	$('#changecubewhite').fadeIn('fast');
   });
 });
 function pop(){
