@@ -54,7 +54,7 @@ $(document).ready(function(){
   	$('#changecubewhite').css('display', 'inline-block');
   	$(this).css('display', 'none');
   });
-  $(document).keydown(pop);
+  $(document).keypress(pop);
   $(document).mousedown(pop);
   $('#pop').click(function(){
   	cube.edges.setRadius(100);
@@ -91,7 +91,6 @@ $(document).ready(function(){
 	$('#two').css('display', 'inline-block');
 	$('#pop').fadeIn('slow');
   });
-
 });
 function pop(){
 	var number;
