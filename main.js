@@ -14,7 +14,7 @@ $(document).ready(function(){
   $('#changecubeblack').css('display', 'none');
   $('#changecubestickerless').css('display', 'none');
   $('#changecubenorm').css('display', 'none');
-  var container = $( '#containerforcube' );
+  var container = $('#containerforcube');
   container.append( cube.domElement );
   $('#togdir').click(function(){
   	$('#directions').slideToggle();
