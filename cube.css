@@ -119,6 +119,9 @@
 	Awwww.... Look at da purty colors...
 
 */
+.purty {
+	border: 1px solid black;
+}
 .purty .face.faceFront { background-color: white; }
 .purty .face.faceUp    { background-color: #b00000; }
 .purty .face.faceRight { background-color: green; }
