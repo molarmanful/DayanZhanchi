@@ -11,6 +11,7 @@ $(document).ready(function(){
   window.cube = new ERNO.Cube();
   cube.position.y = 0;
   $('#changecubeblack').css('display', 'none');
+  $('#changecubestickerless').css('display', 'none');
   $('#changecubenorm').css('display', 'none');
   var container = $( '#containerforcube' );
   container.append( cube.domElement );
@@ -36,14 +37,21 @@ $(document).ready(function(){
   $('#changecubewhite').click(function(){
   	$('.face').css('background-color', 'white');
   	$('.faceIntroverted').css('background-color', 'white');
-  	$('#changecubeblack').css('display', 'inline-block');
-  	$('#changecubewhite').css('display', 'none');
+  	$('#changecubestickerless').css('display', 'inline-block');
+  	$(this).css('display', 'none');
   });
   $('#changecubeblack').click(function(){
   	$('.face').css('background-color', 'black');
   	$('.faceIntroverted').css('background-color', 'black');
   	$('#changecubewhite').css('display', 'inline-block');
-  	$('#changecubeblack').css('display', 'none');
+  	$(this).css('display', 'none');
+  });
+  $('#changecubestickerless').click(function(){
+  	Array.prototype.slice.call( document.querySelectorAll('.cubelet')).forEach( function( e ){
+		e.classList.add('purty');
+	});
+  	$('#changecubeblack').css('display', 'inline-block');
+  	$(this).css('display', 'none');
   });
   $(document).keydown(pop);
   $(document).mousedown(pop);
