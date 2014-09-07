@@ -47,18 +47,12 @@ $(document).ready(function(){
   $(document).keydown(pop);
   $(document).mousedown(pop);
   $('#pop').click(function(){
-  	if($('#two').css('display') == 'none'){
-  		edge = -140;
-  	}
   	cube.edges.setRadius(edge);
 	cube.corners.setRadius( 100 );
 	$(this).css('display', 'none');
 	$('#reassemble').css('display', 'inline-block');
   });
   $('#reassemble').click(function(){
-  	if($('#two').css('display') == 'none'){
-  		corner = -60;
-  	}
   	cube.edges.setRadius(edge);
 	cube.corners.setRadius(corner);
 	$(this).css('display', 'none');
