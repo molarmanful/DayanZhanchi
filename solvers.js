@@ -791,12 +791,6 @@ ERNO.Solver = function(){
 	
 	
 	*/
-	
-	
-	
-
-
-	this.logic = function( cube ){ return false };;
 }
 
 
