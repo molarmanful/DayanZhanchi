@@ -47,8 +47,6 @@ solver.logic = function( cube ){
 		group.setOpacity( 1 );
 	}
 
-	cube.twistDuration = 1000 / 2;
-
 
 
 
