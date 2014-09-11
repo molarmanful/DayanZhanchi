@@ -4960,24 +4960,6 @@
             }
         }()
     });
-    ERNO.Solver = function() {
-        this.logic = function(a) {
-            return !1
-        }
-    };
-    ERNO.Solver.prototype.consider = function(a) {
-        if (void 0 === a) return console.warn("A cube [Cube] argument must be specified for Solver.consider()."), !1;
-        if (!1 === a instanceof ERNO.Cube) return console.warn("The cube argument provided is not a valid Cube."), !1;
-        a.isShuffling = !1;
-        return a.isSolved() ? (ERNO.Solver.prototype.explain("I\u2019ve found that the cube is already solved."), !1) : this.logic(a)
-    };
-    ERNO.Solver.prototype.hint = function(a) {
-        console.log("%c" + a + "%c\n", "background-color: #EEE; color: #333", "")
-    };
-    ERNO.Solver.prototype.explain = function(a) {
-        console.log("Solver says: %c " + a + " %c\n", "color: #080", "")
-    };
-
     window.ERNO = ERNO;
     window._ = _;
     window.TWEEN = window.TWEEN || TWEEN;
