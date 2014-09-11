@@ -1,3 +1,4 @@
+var idleInterval = setInterval(timerIncrement, 10000);
 $(document).ready(function(){
   if ( self !== top ) {
     $('#dircon').css('display', 'none');
@@ -5,7 +6,6 @@ $(document).ready(function(){
   var edge = 0;
   var corner = 0;
   var center = 0;
-  var idleInterval = setInterval(timerIncrement, 10000);
   $(document).mousemove(function (e) {
   	clearInterval(idleInterval);
   });
