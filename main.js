@@ -94,6 +94,9 @@ $(document).ready(function(){
 	$('#two').css('display', 'inline-block');
 	$('#pop').fadeIn('slow');
   });
+  $('button').click(function(){
+  	$(this).blur();
+  });
 });
 function pop(){
 	var number;
