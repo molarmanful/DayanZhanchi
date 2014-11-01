@@ -107,6 +107,9 @@ function pop(){
 			cube.hasAddress(edgear[randedge]).setRadius(1000);
 			cube.hasAddress(edgear[randedge]).setRadius(1000);
 			$('#demotext').text('YOUR CUBE HAS POPPED!').css('color', 'red');
+			$(document).click(function(){
+				$('#demotext').text('DAYAN ZHANCHI');
+			});
 		}
 	});
 }
