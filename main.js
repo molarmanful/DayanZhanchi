@@ -79,8 +79,8 @@ $(document).ready(function(){
 	$('#reassemble').fadeOut('fast');
   });
   $('#three').click(function(){
-  	cube.edges.setOpacity(1, 1);
-  	cube.centers.setOpacity(1, 1);
+  	cube.edges.setOpacity(1, 10);
+  	cube.centers.setOpacity(1, 10);
   	cube.corners.setRadius(0, 10);
   	$('.cube').css('height', '100%');
   	$('.cube').css('width', '100%');
