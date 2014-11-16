@@ -69,8 +69,8 @@ $(document).ready(function(){
   });
   $('#two').click(function(){
   	cube.edges.setOpacity(0, 1);
-	cube.corners.setRadius(-60);
 	cube.centers.setOpacity(0, 1);
+	cube.corners.setRadius(-60, 10);
 	$('.cube').css('height', '150%');
 	$('.cube').css('width', '150%');
 	$(this).css('display', 'none');
@@ -81,7 +81,7 @@ $(document).ready(function(){
   $('#three').click(function(){
   	cube.edges.setOpacity(1, 1);
   	cube.centers.setOpacity(1, 1);
-  	cube.corners.setRadius(0);
+  	cube.corners.setRadius(0, 10);
   	$('.cube').css('height', '100%');
   	$('.cube').css('width', '100%');
 	$(this).css('display', 'none');
