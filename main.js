@@ -69,7 +69,7 @@ $(document).ready(function(){
   });
   $('#two').click(function(){
   	cube.edges.setRadius(-120);
-	cube.centers.setOpacity(-120);
+	cube.centers.setRadius(-120);
 	cube.corners.setRadius(-60);
 	$('.cube').css('height', '150%');
 	$('.cube').css('width', '150%');
@@ -80,7 +80,7 @@ $(document).ready(function(){
   });
   $('#three').click(function(){
   	cube.edges.setRadius(0);
-	cube.centers.setOpacity(0);
+	cube.centers.setRadius(0);
   	cube.corners.setRadius(0);
   	$('.cube').css('height', '100%');
   	$('.cube').css('width', '100%');
