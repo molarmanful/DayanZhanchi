@@ -68,9 +68,9 @@ $(document).ready(function(){
 	$('#pop').css('display', 'inline-block');
   });
   $('#two').click(function(){
-  	cube.edges.setOpacity(0, -1);
-	cube.centers.setOpacity(0, -1);
-	cube.corners.setRadius(-60, 10);
+  	cube.edges.setOpacity(0);
+	cube.centers.setOpacity(0);
+	cube.corners.setRadius(-60);
 	$('.cube').css('height', '150%');
 	$('.cube').css('width', '150%');
 	$(this).css('display', 'none');
